@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Dashboard</title>
 
     <!-- Scripts 
     <script src="{{ asset('js/app.js') }}" defer></script>-->
@@ -34,7 +34,7 @@
     <script type="text/javascript" src="{{ asset('assets/js/plugins/visualization/d3/d3.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/plugins/visualization/dimple/dimple.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/core/libraries/jquery_ui/interactions.min.js') }}"></script>
-    <script type="text/javascript" src="assets/js/plugins/forms/selects/select2.min.js"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/plugins/forms/selects/select2.min.js') }}"></script>
 
     <script type="text/javascript" src="{{ asset('assets/js/core/app.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/pages/form_select2.js') }}"></script>

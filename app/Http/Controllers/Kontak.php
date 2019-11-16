@@ -4,9 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\ModelKontak;
+use Illuminate\Support\Facades\DB;
 
 class Kontak extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,8 +19,10 @@ class Kontak extends Controller
      */
     public function index()
     {
-        $data = ModelKontak::all();
-        return view('kontak',compact('data'));
+        //$data = ModelKontak::all();
+        //return view('kontak',compact('data'));
+        $data = DB::table('kontak')->paginate(5);
+        return view('kontak',['data' => $data]);
     }
 
     /**

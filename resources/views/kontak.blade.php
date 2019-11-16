@@ -24,7 +24,7 @@
     <div class="row">
       <div class="col-lg-12">      		
           <div class="table-responsive">
-            <table class="table table-striped table-hover">
+            <table class="table table-striped table-hover mb-3">
               <thead class="bg-blue-600">
                 <tr>
                     <th>No.</th>
@@ -58,8 +58,11 @@
       </div>
     </div>
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col-md-8">
           <button type="button" data-toggle="modal" data-target="#add-data" class="btn btn-primary">Tambah Data</button>
+        </div>
+        <div class="col-md-4" align="right">
+            {{ $data->links() }}
         </div>
     </div>
 </div>
